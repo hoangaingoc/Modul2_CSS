@@ -1,0 +1,10 @@
+*{
+    box-sizing: border-box;
+}
+[class^="col-"] {
+    /*border: 1px solid;*/
+    /*margin-top: 10px;*/
+}
+[class^="col-"] img{
+    width: 100%;
+}
