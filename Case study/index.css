@@ -5,17 +5,15 @@
     font-family: Arial;
 }
 
-/*[class^="col-"] {*/
-/*    border: 1px solid;*/
-/*    width: 2%;*/
-/*}*/
+[class^="col-"] {
 
-/*[class^="col-"] img {*/
-/*    width: 100%;*/
-/*}*/
+}
 
-.container {
-    height: 3000px;
+[class^="col-"] img {
+    width: 100%;
+}
+.container-fluid{
+    padding: 0;
 }
 
 .header {
@@ -28,19 +26,19 @@
 }
 
 .logo{
-    margin: 0 20px;
+    margin: 10px 80px 10px 0;
 }
 
 .logo img {
-    padding: 5px;
-    margin: 10px;
+    width: 130px;
+    height: 33px;
 }
 
 .header_canhan {
     padding: 0 15px;
     border-radius: 20px;
     align-items: center;
-    background: #0265b9;
+    background: #377DCD;
 }
 
 .canhan {
@@ -81,28 +79,84 @@ input:focus {
     font-weight: bold;
 }
 
-.icon_Buy img{
+.icon_Buy img, .dropdown img{
     height: 30px;
     width: 30px;
     margin-right: 5px;
 }
 
-.dropdown{
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
     font-size: 16px;
+    color: #000;
+}
+
+.icon {
+    width: 16px;
+    height: 16px;
+}
+.arrow {
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid #000;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
     color: black;
-    font-weight: bold;
-}
-.mid {
-    display: flex;
-    justify-content: space-between;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
 }
 
-.right {
-    display: flex;
-    justify-content: space-between;
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
 }
 
-.nav {
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropdown-label {
+    color: #007BFF;
+}
+
+.menu{
+    background-color: #1F7FD0;
     width: 100%;
-    height: 50px;
+    justify-content: center;
+    display: flex;
+}
+.menu-item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    padding: 5px 10px 0 25px;
+}
+.menu-item img{
+    width: 35px;
+    height: 35px;
+}
+.menu-item span {
+    font-size: 14px;
+    padding: 7px 0 2px;
 }
